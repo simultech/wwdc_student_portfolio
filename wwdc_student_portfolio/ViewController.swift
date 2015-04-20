@@ -22,10 +22,24 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func nameClicked(sender: AnyObject) {
-        textField.text = "I'm a developer!"
+    
+    // MARK: Menu Event Listeners
+    
+    @IBAction func wwdcClicked(sender: AnyObject) {
+        print("TEST")
+    }
+    
+    @IBAction func projectsClicked(sender: AnyObject) {
+    }
+    
+    @IBAction func interestsClicked(sender: AnyObject) {
     }
 
+    @IBAction func skillsClicked(sender: AnyObject) {
+    }
+    
+    @IBAction func aboutmeClicked(sender: AnyObject) {
+    }
+    
 }
 

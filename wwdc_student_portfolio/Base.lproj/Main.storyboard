@@ -4,6 +4,60 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
+        <!--Aboutme View Controller-->
+        <scene sceneID="Vkq-Lb-9V0">
+            <objects>
+                <viewController id="gft-W7-x7Q" customClass="AboutmeViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J6Y-Qn-YGh"/>
+                        <viewControllerLayoutGuide type="bottom" id="DtS-ew-9VG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dxz-BU-0kb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfI-Oi-nqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="647" y="-142"/>
+        </scene>
+        <!--Projects View Controller-->
+        <scene sceneID="G4s-dc-iLU">
+            <objects>
+                <viewController id="Ypy-nU-q6s" customClass="ProjectsViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nss-y6-e40"/>
+                        <viewControllerLayoutGuide type="bottom" id="5mT-o7-M1q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2o8-Op-B91">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5E-rO-6Pt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1323" y="-142"/>
+        </scene>
+        <!--Wwdc View Controller-->
+        <scene sceneID="HbF-2h-H9u">
+            <objects>
+                <viewController id="AjD-2J-Vu9" customClass="WwdcViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QkE-t7-uMj"/>
+                        <viewControllerLayoutGuide type="bottom" id="E3a-0Y-ZVl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fAs-2A-Mc4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEZ-7q-AYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1323" y="556"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -16,33 +70,117 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaQ-qb-GZG">
-                                <rect key="frame" x="169" y="20" width="263" height="42"/>
-                                <state key="normal" title="Andrew Dekker">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnU-S0-Hbw">
+                                <rect key="frame" x="236" y="84" width="128" height="30"/>
+                                <state key="normal" title="About Me">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="nameClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6QG-e6-TMm"/>
+                                    <action selector="aboutmeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iAv-8T-IJh"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZES-ft-hhS">
-                                <rect key="frame" x="184" y="206" width="233" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnC-S6-lSD">
+                                <rect key="frame" x="248" y="122" width="104" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="UHn-mj-Zh8"/>
+                                </constraints>
+                                <state key="normal" title="Skills">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skillsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zcd-ch-7Vw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1v-Cd-9dC">
+                                <rect key="frame" x="245" y="160" width="111" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="gZS-bo-cbJ"/>
+                                </constraints>
+                                <state key="normal" title="Interests">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="interestsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="85V-fF-mx1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdI-2u-FdD">
+                                <rect key="frame" x="237" y="198" width="127" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="gco-fV-SLi"/>
+                                </constraints>
+                                <state key="normal" title="Projects">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="projectsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H3i-yK-o74"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52I-Jp-Pcj">
+                                <rect key="frame" x="236" y="236" width="128" height="30"/>
+                                <state key="normal" title="WWDC 2015">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="wwdcClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gv6-dz-mpo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="ZES-ft-hhS" secondAttribute="centerX" id="dAh-Gr-gLu"/>
-                            <constraint firstAttribute="centerX" secondItem="GaQ-qb-GZG" secondAttribute="centerX" id="fOK-P7-Sre"/>
+                            <constraint firstItem="JdI-2u-FdD" firstAttribute="top" secondItem="g1v-Cd-9dC" secondAttribute="bottom" constant="8" symbolic="YES" id="095-g9-a1z"/>
+                            <constraint firstItem="gnU-S0-Hbw" firstAttribute="leading" secondItem="52I-Jp-Pcj" secondAttribute="leading" id="4II-DS-XlV"/>
+                            <constraint firstItem="gnU-S0-Hbw" firstAttribute="trailing" secondItem="JdI-2u-FdD" secondAttribute="trailing" id="B9A-ML-OdH"/>
+                            <constraint firstItem="rnC-S6-lSD" firstAttribute="top" secondItem="gnU-S0-Hbw" secondAttribute="bottom" constant="8" symbolic="YES" id="KNt-0o-HyO"/>
+                            <constraint firstItem="rnC-S6-lSD" firstAttribute="centerX" secondItem="g1v-Cd-9dC" secondAttribute="centerX" id="NDI-we-nnP"/>
+                            <constraint firstItem="gnU-S0-Hbw" firstAttribute="centerX" secondItem="rnC-S6-lSD" secondAttribute="centerX" id="WlY-ha-wYB"/>
+                            <constraint firstItem="JdI-2u-FdD" firstAttribute="centerX" secondItem="g1v-Cd-9dC" secondAttribute="centerX" id="ZRD-kl-ZCf"/>
+                            <constraint firstItem="52I-Jp-Pcj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZoS-co-G0L"/>
+                            <constraint firstItem="52I-Jp-Pcj" firstAttribute="top" secondItem="JdI-2u-FdD" secondAttribute="bottom" constant="8" symbolic="YES" id="cXQ-yO-aWE"/>
+                            <constraint firstItem="g1v-Cd-9dC" firstAttribute="top" secondItem="rnC-S6-lSD" secondAttribute="bottom" constant="8" symbolic="YES" id="d9r-Qy-s3t"/>
+                            <constraint firstItem="gnU-S0-Hbw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="sZ7-Yy-sw1"/>
+                            <constraint firstItem="52I-Jp-Pcj" firstAttribute="trailing" secondItem="JdI-2u-FdD" secondAttribute="trailing" id="uSI-UJ-DBe"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="textField" destination="ZES-ft-hhS" id="QTe-Td-7me"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-33" y="-142"/>
+        </scene>
+        <!--Interests View Controller-->
+        <scene sceneID="uOa-iB-hko">
+            <objects>
+                <viewController id="I6s-cC-AkO" customClass="InterestsViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TZk-0Q-Vub"/>
+                        <viewControllerLayoutGuide type="bottom" id="VGi-TW-kMH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wlS-uM-TWe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6VC-nq-fDC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="556"/>
+        </scene>
+        <!--Skills View Controller-->
+        <scene sceneID="sTV-AI-v2E">
+            <objects>
+                <viewController id="mRL-nt-nPg" customClass="SkillsViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="57J-mw-4YF"/>
+                        <viewControllerLayoutGuide type="bottom" id="NtF-XR-HTw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eyo-8b-es0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJo-mD-SaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="647" y="556"/>
         </scene>
     </scenes>
 </document>

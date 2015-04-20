@@ -6,4 +6,8 @@
 //  Copyright (c) 2015 Andrew Dekker. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class WwdcViewController : UIViewController {
+    
+}

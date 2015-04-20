@@ -13,11 +13,11 @@
 		A9451D9B1AE4DC5A00B3EB26 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9451D9A1AE4DC5A00B3EB26 /* Images.xcassets */; };
 		A9451D9E1AE4DC5A00B3EB26 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9451D9C1AE4DC5A00B3EB26 /* LaunchScreen.xib */; };
 		A9451DAA1AE4DC5B00B3EB26 /* wwdc_student_portfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DA91AE4DC5B00B3EB26 /* wwdc_student_portfolioTests.swift */; };
-		A9451DB91AE5118F00B3EB26 /* AboutmeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DB81AE5118F00B3EB26 /* AboutmeController.swift */; };
-		A9451DBB1AE511A400B3EB26 /* SkillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DBA1AE511A400B3EB26 /* SkillsController.swift */; };
-		A9451DBD1AE511B400B3EB26 /* InterestsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DBC1AE511B400B3EB26 /* InterestsController.swift */; };
-		A9451DBF1AE511BF00B3EB26 /* ProjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DBE1AE511BF00B3EB26 /* ProjectsController.swift */; };
-		A9451DC11AE511CC00B3EB26 /* WwdcController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DC01AE511CC00B3EB26 /* WwdcController.swift */; };
+		A9451DB91AE5118F00B3EB26 /* AboutmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DB81AE5118F00B3EB26 /* AboutmeViewController.swift */; };
+		A9451DBB1AE511A400B3EB26 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DBA1AE511A400B3EB26 /* SkillsViewController.swift */; };
+		A9451DBD1AE511B400B3EB26 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DBC1AE511B400B3EB26 /* InterestsViewController.swift */; };
+		A9451DBF1AE511BF00B3EB26 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DBE1AE511BF00B3EB26 /* ProjectsViewController.swift */; };
+		A9451DC11AE511CC00B3EB26 /* WwdcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DC01AE511CC00B3EB26 /* WwdcViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +41,11 @@
 		A9451DA31AE4DC5B00B3EB26 /* wwdc_student_portfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wwdc_student_portfolioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9451DA81AE4DC5B00B3EB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9451DA91AE4DC5B00B3EB26 /* wwdc_student_portfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wwdc_student_portfolioTests.swift; sourceTree = "<group>"; };
-		A9451DB81AE5118F00B3EB26 /* AboutmeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutmeController.swift; sourceTree = "<group>"; };
-		A9451DBA1AE511A400B3EB26 /* SkillsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsController.swift; sourceTree = "<group>"; };
-		A9451DBC1AE511B400B3EB26 /* InterestsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsController.swift; sourceTree = "<group>"; };
-		A9451DBE1AE511BF00B3EB26 /* ProjectsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsController.swift; sourceTree = "<group>"; };
-		A9451DC01AE511CC00B3EB26 /* WwdcController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WwdcController.swift; sourceTree = "<group>"; };
+		A9451DB81AE5118F00B3EB26 /* AboutmeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutmeViewController.swift; sourceTree = "<group>"; };
+		A9451DBA1AE511A400B3EB26 /* SkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
+		A9451DBC1AE511B400B3EB26 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
+		A9451DBE1AE511BF00B3EB26 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		A9451DC01AE511CC00B3EB26 /* WwdcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WwdcViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,11 +144,11 @@
 		A9451DB51AE5114C00B3EB26 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A9451DB81AE5118F00B3EB26 /* AboutmeController.swift */,
-				A9451DBA1AE511A400B3EB26 /* SkillsController.swift */,
-				A9451DBC1AE511B400B3EB26 /* InterestsController.swift */,
-				A9451DBE1AE511BF00B3EB26 /* ProjectsController.swift */,
-				A9451DC01AE511CC00B3EB26 /* WwdcController.swift */,
+				A9451DB81AE5118F00B3EB26 /* AboutmeViewController.swift */,
+				A9451DBA1AE511A400B3EB26 /* SkillsViewController.swift */,
+				A9451DBC1AE511B400B3EB26 /* InterestsViewController.swift */,
+				A9451DBE1AE511BF00B3EB26 /* ProjectsViewController.swift */,
+				A9451DC01AE511CC00B3EB26 /* WwdcViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -267,13 +267,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9451DC11AE511CC00B3EB26 /* WwdcController.swift in Sources */,
-				A9451DB91AE5118F00B3EB26 /* AboutmeController.swift in Sources */,
-				A9451DBD1AE511B400B3EB26 /* InterestsController.swift in Sources */,
+				A9451DC11AE511CC00B3EB26 /* WwdcViewController.swift in Sources */,
+				A9451DB91AE5118F00B3EB26 /* AboutmeViewController.swift in Sources */,
+				A9451DBD1AE511B400B3EB26 /* InterestsViewController.swift in Sources */,
 				A9451D961AE4DC5A00B3EB26 /* ViewController.swift in Sources */,
 				A9451D941AE4DC5A00B3EB26 /* AppDelegate.swift in Sources */,
-				A9451DBB1AE511A400B3EB26 /* SkillsController.swift in Sources */,
-				A9451DBF1AE511BF00B3EB26 /* ProjectsController.swift in Sources */,
+				A9451DBB1AE511A400B3EB26 /* SkillsViewController.swift in Sources */,
+				A9451DBF1AE511BF00B3EB26 /* ProjectsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
