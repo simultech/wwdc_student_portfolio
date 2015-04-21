@@ -18,6 +18,9 @@
 		A9451DBD1AE511B400B3EB26 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DBC1AE511B400B3EB26 /* InterestsViewController.swift */; };
 		A9451DBF1AE511BF00B3EB26 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DBE1AE511BF00B3EB26 /* ProjectsViewController.swift */; };
 		A9451DC11AE511CC00B3EB26 /* WwdcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DC01AE511CC00B3EB26 /* WwdcViewController.swift */; };
+		A9AECFAA1AE537BE00BDEF56 /* wisp 1.mov in Resources */ = {isa = PBXBuildFile; fileRef = A9AECFA91AE537BE00BDEF56 /* wisp 1.mov */; };
+		A9AECFAC1AE5B53D00BDEF56 /* WispView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AECFAB1AE5B53D00BDEF56 /* WispView.swift */; };
+		A9F5F98E1AE67F4F001058B5 /* TypeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5F98D1AE67F4F001058B5 /* TypeLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		A9451DBC1AE511B400B3EB26 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		A9451DBE1AE511BF00B3EB26 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		A9451DC01AE511CC00B3EB26 /* WwdcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WwdcViewController.swift; sourceTree = "<group>"; };
+		A9AECFA91AE537BE00BDEF56 /* wisp 1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "wisp 1.mov"; sourceTree = "<group>"; };
+		A9AECFAB1AE5B53D00BDEF56 /* WispView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WispView.swift; sourceTree = "<group>"; };
+		A9F5F98D1AE67F4F001058B5 /* TypeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +140,7 @@
 		A9451DB41AE5114300B3EB26 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A9AECFA91AE537BE00BDEF56 /* wisp 1.mov */,
 				A9451D971AE4DC5A00B3EB26 /* Main.storyboard */,
 				A9451D9A1AE4DC5A00B3EB26 /* Images.xcassets */,
 				A9451D9C1AE4DC5A00B3EB26 /* LaunchScreen.xib */,
@@ -163,6 +170,8 @@
 		A9451DB71AE5115700B3EB26 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A9AECFAB1AE5B53D00BDEF56 /* WispView.swift */,
+				A9F5F98D1AE67F4F001058B5 /* TypeLabel.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -216,6 +225,7 @@
 				TargetAttributes = {
 					A9451D8D1AE4DC5A00B3EB26 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = X4J3AMW696;
 					};
 					A9451DA21AE4DC5B00B3EB26 = {
 						CreatedOnToolsVersion = 6.0;
@@ -249,6 +259,7 @@
 			files = (
 				A9451D991AE4DC5A00B3EB26 /* Main.storyboard in Resources */,
 				A9451D9E1AE4DC5A00B3EB26 /* LaunchScreen.xib in Resources */,
+				A9AECFAA1AE537BE00BDEF56 /* wisp 1.mov in Resources */,
 				A9451D9B1AE4DC5A00B3EB26 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,10 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9AECFAC1AE5B53D00BDEF56 /* WispView.swift in Sources */,
 				A9451DC11AE511CC00B3EB26 /* WwdcViewController.swift in Sources */,
 				A9451DB91AE5118F00B3EB26 /* AboutmeViewController.swift in Sources */,
 				A9451DBD1AE511B400B3EB26 /* InterestsViewController.swift in Sources */,
 				A9451D961AE4DC5A00B3EB26 /* ViewController.swift in Sources */,
+				A9F5F98E1AE67F4F001058B5 /* TypeLabel.swift in Sources */,
 				A9451D941AE4DC5A00B3EB26 /* AppDelegate.swift in Sources */,
 				A9451DBB1AE511A400B3EB26 /* SkillsViewController.swift in Sources */,
 				A9451DBF1AE511BF00B3EB26 /* ProjectsViewController.swift in Sources */,
@@ -398,9 +411,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = wwdc_student_portfolio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -408,9 +425,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = wwdc_student_portfolio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -467,6 +488,7 @@
 				A9451DAF1AE4DC5B00B3EB26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9451DB01AE4DC5B00B3EB26 /* Build configuration list for PBXNativeTarget "wwdc_student_portfolioTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +497,7 @@
 				A9451DB21AE4DC5B00B3EB26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

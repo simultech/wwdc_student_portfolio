@@ -10,12 +10,69 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var helloButton: UIButton!
+    
+    @IBOutlet weak var aboutmeButton: UIButton!
+    @IBOutlet weak var interestsButton: UIButton!
+    @IBOutlet weak var projectsButton: UIButton!
+    @IBOutlet weak var wwdcButton: UIButton!
+    @IBOutlet weak var skillsButton: UIButton!
 
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var aboutmeText: TypeLabel!
+    @IBOutlet weak var skillsText: TypeLabel!
+    @IBOutlet weak var interestsText: TypeLabel!
+    @IBOutlet weak var projectsText: TypeLabel!
+    @IBOutlet weak var wwdcText: TypeLabel!
+    
+    @IBOutlet weak var wisp: WispView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        hideText()
+        let pan = UIPanGestureRecognizer(target: self, action: "panGesture:")
+        self.view.addGestureRecognizer(pan)
+        
+        var selfview = UIImageView(image: UIImage(named: "face"))
+        self.view.addSubview(selfview)
+        self.view.sendSubviewToBack(selfview)
+        selfview.maskView = self.wisp.maskImageView
+    }
+    
+    func panGesture(recognizer:UIPanGestureRecognizer) {
+        var translatedPoint = recognizer.locationInView(self.view)
+        self.wisp.center = CGPointMake(translatedPoint.x, translatedPoint.y)
+        if(recognizer.state == UIGestureRecognizerState.Ended || recognizer.state == UIGestureRecognizerState.Cancelled) {
+            fadeOut(self.wisp, delay:0)
+            fadeOut(self.wisp.maskImageView, delay: 0)
+        }
+        self.wisp.maskImageView.center = self.wisp.center
+    }
+    
+    func hideText() {
+        helloButton.alpha = 0
+        aboutmeButton.alpha = 0
+        interestsButton.alpha = 0
+        skillsButton.alpha = 0
+        projectsButton.alpha = 0
+        wwdcButton.alpha = 0
+        aboutmeText.alpha = 0
+        projectsText.alpha = 0
+        skillsText.alpha = 0
+        interestsText.alpha = 0
+        wwdcText.alpha = 0
+        self.wisp.alpha = 0
+        self.wisp.maskImageView.alpha = 0
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        fadeIn(self.wisp, delay: 0)
+        fadeIn(self.wisp.maskImageView, delay: 0)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        fadeIn(self.helloButton, delay:2);
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,23 +80,51 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: Menu Event Listeners
+    // MARK: Event listeners
+    @IBAction func helloClicked(sender: AnyObject) {
+        typeIn(self.aboutmeText, delay: 0)
+        fadeIn(self.aboutmeButton, delay: 1)
+        typeIn(self.skillsText, delay: 2)
+        fadeIn(self.skillsButton, delay: 2.8)
+        typeIn(self.interestsText, delay: 4)
+        fadeIn(self.interestsButton, delay: 5.4)
+        typeIn(self.wwdcText, delay: 6.2)
+        fadeIn(self.wwdcButton, delay: 8.9)
+    }
     
-    @IBAction func wwdcClicked(sender: AnyObject) {
-        print("TEST")
+    @IBAction func aboutClicked(sender: AnyObject) {
+    
+    }
+    
+    @IBAction func interestsClicked(sender: AnyObject) {
+    }
+    
+    @IBAction func skillsClicked(sender: AnyObject) {
     }
     
     @IBAction func projectsClicked(sender: AnyObject) {
     }
     
-    @IBAction func interestsClicked(sender: AnyObject) {
-    }
-
-    @IBAction func skillsClicked(sender: AnyObject) {
+    @IBAction func wwdcClicked(sender: AnyObject) {
     }
     
-    @IBAction func aboutmeClicked(sender: AnyObject) {
+    
+    // MARK: Helper methods
+    func typeIn(view:TypeLabel, delay:NSNumber) {
+        view.typeInView(view.text!, delay:delay)
     }
     
+    func fadeIn(view:UIView, delay:NSNumber) {
+        
+        UIView.animateWithDuration(NSTimeInterval(1.5), delay: delay.doubleValue, options: nil, animations: {
+            view.alpha = 1.0
+        }, completion:nil);
+    }
+    
+    func fadeOut(view:UIView, delay:NSNumber) {
+        UIView.animateWithDuration(1.5, delay: delay.doubleValue, options: nil, animations: {
+            view.alpha = 0.0
+            }, completion:nil);
+    }
 }
 
