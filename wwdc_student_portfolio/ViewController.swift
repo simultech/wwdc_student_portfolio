@@ -11,6 +11,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var skip:Bool = true
+    
     @IBOutlet weak var helloButton: UIButton!
     
     @IBOutlet weak var aboutmeButton: UIButton!
@@ -50,17 +52,19 @@ class ViewController: UIViewController {
     }
     
     func hideText() {
-        helloButton.alpha = 0
-        aboutmeButton.alpha = 0
-        interestsButton.alpha = 0
-        skillsButton.alpha = 0
-        projectsButton.alpha = 0
-        wwdcButton.alpha = 0
-        aboutmeText.alpha = 0
-        projectsText.alpha = 0
-        skillsText.alpha = 0
-        interestsText.alpha = 0
-        wwdcText.alpha = 0
+        if(!skip) {
+            helloButton.alpha = 0
+            aboutmeButton.alpha = 0
+            interestsButton.alpha = 0
+            skillsButton.alpha = 0
+            projectsButton.alpha = 0
+            wwdcButton.alpha = 0
+            aboutmeText.alpha = 0
+            projectsText.alpha = 0
+            skillsText.alpha = 0
+            interestsText.alpha = 0
+            wwdcText.alpha = 0
+        }
         self.wisp.alpha = 0
         self.wisp.maskImageView.alpha = 0
     }
@@ -88,12 +92,18 @@ class ViewController: UIViewController {
         fadeIn(self.skillsButton, delay: 2.8)
         typeIn(self.interestsText, delay: 4)
         fadeIn(self.interestsButton, delay: 5.4)
-        typeIn(self.wwdcText, delay: 6.2)
-        fadeIn(self.wwdcButton, delay: 8.9)
+        typeIn(self.projectsText, delay: 6.4)
+        fadeIn(self.projectsButton, delay: 7.4)
+        typeIn(self.wwdcText, delay: 9.2)
+        fadeIn(self.wwdcButton, delay: 12.0)
     }
     
     @IBAction func aboutClicked(sender: AnyObject) {
-    
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc:UIViewController = storyboard.instantiateViewControllerWithIdentifier("AboutVC") as! UIViewController
+        self.presentViewController(vc, animated: true, completion: {
+            print("PRESENTED")
+        })
     }
     
     @IBAction func interestsClicked(sender: AnyObject) {

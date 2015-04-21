@@ -7,7 +7,7 @@
         <!--Aboutme View Controller-->
         <scene sceneID="Vkq-Lb-9V0">
             <objects>
-                <viewController id="gft-W7-x7Q" customClass="AboutmeViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gft-W7-x7Q" customClass="AboutmeViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dxz-BU-0kb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
         <!--Projects View Controller-->
         <scene sceneID="G4s-dc-iLU">
             <objects>
-                <viewController id="Ypy-nU-q6s" customClass="ProjectsViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ypy-nU-q6s" customClass="ProjectsViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2o8-Op-B91">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
         <!--Wwdc View Controller-->
         <scene sceneID="HbF-2h-H9u">
             <objects>
-                <viewController id="AjD-2J-Vu9" customClass="WwdcViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WwdcVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AjD-2J-Vu9" customClass="WwdcViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fAs-2A-Mc4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,9 +46,6 @@
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="lbD-iZ-fsg"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0033820919723169807" green="0.21973998028058084" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -72,7 +69,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o5o-qw-CBe">
-                                <rect key="frame" x="93" y="79" width="134" height="73"/>
+                                <rect key="frame" x="93" y="47" width="134" height="73"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <state key="normal" title="Hello">
@@ -84,12 +81,12 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="yfy-nz-GOq">
-                                <rect key="frame" x="-102" y="253" width="525" height="315"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="-109" y="307" width="525" height="241"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="NcW-DZ-Kx2">
                                         <rect key="frame" x="130" y="0.0" width="273" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Aq-jL-RNy">
                                                 <rect key="frame" x="92" y="2" width="186" height="45"/>
@@ -97,12 +94,11 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Andrew Dekker">
-                                                    <color key="titleColor" red="0.70075533809751289" green="1" blue="0.7233847758967864" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="0.32941176470588235" green="0.89803921568627454" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="aboutClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GDV-Ga-if4"/>
-                                                    <segue destination="gft-W7-x7Q" kind="modal" id="QhM-xB-kzh"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n9g-8Q-BJF" customClass="TypeLabel" customModule="wwdc_student_portfolio" customModuleProvider="target">
@@ -114,68 +110,9 @@
                                             </label>
                                         </subviews>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have worked on a" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wfn-Me-Iav" customClass="TypeLabel" customModule="wwdc_student_portfolio" customModuleProvider="target">
-                                        <rect key="frame" x="141" y="190" width="448" height="65"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and I would love to join you at" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n1C-tV-jM7" customClass="TypeLabel" customModule="wwdc_student_portfolio" customModuleProvider="target">
-                                        <rect key="frame" x="130" y="186" width="584" height="121"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9QW-NQ-jti">
-                                        <rect key="frame" x="266" y="190" width="215" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="number of projects">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.94960220740000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="projectsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rKh-3C-qik"/>
-                                            <segue destination="Ypy-nU-q6s" kind="modal" id="Gob-rl-QVV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2uO-ce-fTS">
-                                        <rect key="frame" x="240" y="125" width="182" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="create and hack">
-                                            <color key="titleColor" red="1" green="0.94960220740000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="skillsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6bt-vJ-ZTv"/>
-                                            <segue destination="mRL-nt-nPg" kind="modal" id="39f-IA-hlP"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YJp-v0-Ec0">
-                                        <rect key="frame" x="204" y="277" width="116" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="WWDC15">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="wwdcClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="juT-0W-izK"/>
-                                            <segue destination="AjD-2J-Vu9" kind="modal" id="Em6-tp-LsA"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and I love to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qu2-Ah-rAH" customClass="TypeLabel" customModule="wwdc_student_portfolio" customModuleProvider="target">
-                                        <rect key="frame" x="114" y="239" width="418" height="65"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" id="Nzh-5g-Znw">
-                                        <rect key="frame" x="101" y="57" width="321" height="41"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="104" y="35" width="321" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am an" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vLJ-hY-hyV" customClass="TypeLabel" customModule="wwdc_student_portfolio" customModuleProvider="target">
                                                 <rect key="frame" x="36" y="-12" width="179" height="65"/>
@@ -189,12 +126,86 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Interaction Designer">
-                                                    <color key="titleColor" red="1" green="0.070236308710000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="1" green="0.52549019607843139" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="interestsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yPB-TA-ECN"/>
-                                                    <segue destination="I6s-cC-AkO" kind="modal" id="1sj-Cw-iGC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="noA-7x-5bP">
+                                        <rect key="frame" x="118" y="84" width="288" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and I love to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qu2-Ah-rAH" customClass="TypeLabel" customModule="wwdc_student_portfolio" customModuleProvider="target">
+                                                <rect key="frame" x="19" y="-11" width="125" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2uO-ce-fTS">
+                                                <rect key="frame" x="112" y="8" width="182" height="28"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="create and hack">
+                                                    <color key="titleColor" red="1" green="0.4823529411764706" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="skillsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6bt-vJ-ZTv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="jRO-iu-r2U">
+                                        <rect key="frame" x="102" y="110" width="321" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9QW-NQ-jti">
+                                                <rect key="frame" x="115" y="4" width="215" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="number of projects">
+                                                    <color key="titleColor" red="0.56862745098039214" green="0.30980392156862746" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="projectsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rKh-3C-qik"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="working on a" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wfn-Me-Iav" customClass="TypeLabel" customModule="wwdc_student_portfolio" customModuleProvider="target">
+                                                <rect key="frame" x="21" y="-7" width="197" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="ByZ-a0-2dq">
+                                        <rect key="frame" x="104" y="155" width="321" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and I would love to join you at" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n1C-tV-jM7" customClass="TypeLabel" customModule="wwdc_student_portfolio" customModuleProvider="target">
+                                                <rect key="frame" x="28" y="8" width="338" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YJp-v0-Ec0">
+                                                <rect key="frame" x="102" y="40" width="116" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <state key="normal" title="WWDC15">
+                                                    <color key="titleColor" red="0.58039215686274515" green="0.73333333333333328" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="wwdcClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="juT-0W-izK"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -227,7 +238,7 @@
         <!--Interests View Controller-->
         <scene sceneID="uOa-iB-hko">
             <objects>
-                <viewController id="I6s-cC-AkO" customClass="InterestsViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InterestsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I6s-cC-AkO" customClass="InterestsViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wlS-uM-TWe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -241,7 +252,7 @@
         <!--Skills View Controller-->
         <scene sceneID="sTV-AI-v2E">
             <objects>
-                <viewController id="mRL-nt-nPg" customClass="SkillsViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SkillsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mRL-nt-nPg" customClass="SkillsViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eyo-8b-es0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
