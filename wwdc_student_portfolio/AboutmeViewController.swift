@@ -9,5 +9,9 @@
 import UIKit
 
 class AboutmeViewController : UIViewController {
+    func setup(){
+        print("about me page")
+    }
+
 
 }
