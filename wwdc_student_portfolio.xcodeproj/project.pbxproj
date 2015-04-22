@@ -135,6 +135,7 @@
 		A9451DB31AE5113900B3EB26 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				A97E331A1AE75D3300F2D373 /* TransitionManager.swift */,
 				A9451D931AE4DC5A00B3EB26 /* AppDelegate.swift */,
 				A9451D951AE4DC5A00B3EB26 /* ViewController.swift */,
 			);
@@ -146,7 +147,6 @@
 			children = (
 				A9AECFA91AE537BE00BDEF56 /* wisp 1.mov */,
 				A9451D971AE4DC5A00B3EB26 /* Main.storyboard */,
-				A97E331A1AE75D3300F2D373 /* TransitionManager.swift */,
 				A9451D9A1AE4DC5A00B3EB26 /* Images.xcassets */,
 				A9451D9C1AE4DC5A00B3EB26 /* LaunchScreen.xib */,
 			);

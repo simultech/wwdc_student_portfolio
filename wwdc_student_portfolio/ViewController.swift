@@ -90,19 +90,16 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let toViewController = segue.destinationViewController as! UIViewController
         if(sender != nil) {
-            if(sender!.isEqual(self.aboutmeButton)) {
-                self.transitionManager.xAnimatePostion = -255
-            } else if(sender!.isEqual(self.interestsButton)) {
-                self.transitionManager.xAnimatePostion = -300
-            } else if(sender!.isEqual(self.skillsButton)) {
-                self.transitionManager.xAnimatePostion = -350
-            } else if(sender!.isEqual(self.projectsButton)) {
-                self.transitionManager.xAnimatePostion = -400
-            } else if(sender!.isEqual(self.wwdcButton)) {
-                self.transitionManager.xAnimatePostion = -450
-            } else {
-                self.transitionManager.xAnimatePostion = 0
-            }
+            
+            let senderView = sender as! UIView
+            
+            var senderOrigin = senderView.superview?.convertPoint(senderView.frame.origin, fromCoordinateSpace: self.view)
+            
+            print(senderOrigin)
+            
+            var newXPosition = 0 + (self.view.center.y) - self.view.center.x + senderOrigin!.y - (senderView.frame.size.height/2) + 25 - senderView.frame.origin.y*2
+            
+            self.transitionManager.xAnimatePostion = newXPosition
         }
         toViewController.transitioningDelegate = self.transitionManager
     }

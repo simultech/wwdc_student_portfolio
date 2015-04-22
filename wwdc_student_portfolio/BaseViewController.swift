@@ -59,19 +59,30 @@ class BaseViewController: UIViewController {
         backButton.alpha = 0
         fadeIn(backButton, delay:0)
         
-        let sideBarText = UITextField(frame: CGRectMake(-61, (385+yoffset), 180, 40))
+        let sideBarText = UILabel(frame: CGRectMake(-65, 0, 180, 50))
         sideBarText.textColor = UIColor.whiteColor()
         sideBarText.textAlignment = NSTextAlignment.Right
         sideBarText.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
         sideBarText.text = text
         sideBarText.font = UIFont.systemFontOfSize(20)
         sidebar.addSubview(sideBarText)
-        let sideBarHighlight = UITextField(frame: CGRectMake(-61, (200.0+yoffset), 180, 40))
+        let sideBarHighlight = UILabel(frame: CGRectMake(-65, 0, 180, 50))
         sideBarHighlight.text = highlightText
         sideBarHighlight.textColor = highlightColor
         sideBarHighlight.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
         sideBarHighlight.font = UIFont.systemFontOfSize(20)
         sidebar.addSubview(sideBarHighlight)
+        
+        //Fix y position
+        let sideBarTextWidth = NSString(string: text).sizeWithAttributes([NSFontAttributeName: sideBarText.font]).width
+        let sideBarHightlightWidth = NSString(string: highlightText).sizeWithAttributes([NSFontAttributeName: sideBarHighlight.font]).width
+        var difference = abs(sideBarTextWidth-sideBarHightlightWidth)/2
+        if(text == "") {
+            difference = sideBarHightlightWidth/2
+        }
+        
+        sideBarText.frame.origin.y = self.view.frame.size.height/2 + difference + 5
+        sideBarHighlight.frame.origin.y = self.view.frame.size.height/2 - 185 + difference + 5
     }
 
 }
