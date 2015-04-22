@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     var skip:Bool = true
     
@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var wwdcText: TypeLabel!
     
     @IBOutlet weak var wisp: WispView!
+    
+    let transitionManager = TransitionManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +86,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Transitions
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // this gets a reference to the screen that we're about to transition to
+        let toViewController = segue.destinationViewController as! UIViewController
+        
+        // instead of using the default transition animation, we'll ask
+        // the segue to use our custom TransitionManager object to manage the transition animation
+        toViewController.transitioningDelegate = self.transitionManager
+        
+    }
+    
     // MARK: Event listeners
+    @IBAction func unwindToViewController (sender: UIStoryboardSegue){
+        
+    }
+    
     @IBAction func helloClicked(sender: AnyObject) {
         typeIn(self.aboutmeText, delay: 0)
         fadeIn(self.aboutmeButton, delay: 1)
@@ -98,13 +116,17 @@ class ViewController: UIViewController {
         fadeIn(self.wwdcButton, delay: 12.0)
     }
     
-    @IBAction func aboutClicked(sender: AnyObject) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc:UIViewController = storyboard.instantiateViewControllerWithIdentifier("AboutVC") as! UIViewController
-        self.presentViewController(vc, animated: true, completion: {
-            print("PRESENTED")
-        })
-    }
+//    @IBAction func aboutClicked(sender: AnyObject) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc:UIViewController = storyboard.instantiateViewControllerWithIdentifier("AboutVC") as! UIViewController
+//        vc.transitioningDelegate = self
+//        vc.modalPresentationStyle = UIModalPresentationStyle.None
+////        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+////        let vc:UIViewController = storyboard.instantiateViewControllerWithIdentifier("AboutVC") as! UIViewController
+////        self.presentViewController(vc, animated: true, completion: {
+////            print("PRESENTED")
+////        })
+//    }
     
     @IBAction func interestsClicked(sender: AnyObject) {
     }
@@ -136,5 +158,11 @@ class ViewController: UIViewController {
             view.alpha = 0.0
             }, completion:nil);
     }
+    
+    // MARK: TransitioningDelegate methods
+    
+//    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        let animator:TLTransitionAnimator = TLTransitionAnimator.new()
+//    }
 }
 

@@ -11,12 +11,25 @@
                     <view key="view" contentMode="scaleToFill" id="dxz-BU-0kb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eHf-1N-670">
+                                <rect key="frame" x="143" y="0.0" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xWu-bP-ezd" kind="unwind" unwindAction="unwindToViewController:" id="G4f-zL-3gC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.070236308712234075" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfI-Oi-nqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xWu-bP-ezd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="345.06666666666666" y="-134.42666666666668"/>
+            <point key="canvasLocation" x="345" y="-135"/>
         </scene>
         <!--Projects View Controller-->
         <scene sceneID="G4s-dc-iLU">
@@ -58,7 +71,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="wwdc_student_portfolio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +111,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="aboutClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GDV-Ga-if4"/>
+                                                    <segue destination="gft-W7-x7Q" kind="custom" id="BQz-Y8-k5l"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n9g-8Q-BJF" customClass="TypeLabel" customModule="wwdc_student_portfolio" customModuleProvider="target">
@@ -262,19 +275,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJo-mD-SaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="345.06666666666666" y="526.34666666666669"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="KB0-Yl-kRV">
-            <objects>
-                <viewController id="Kdw-YK-1gE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lau-M0-gK9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k1y-qK-Hcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

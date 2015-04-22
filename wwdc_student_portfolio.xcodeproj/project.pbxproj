@@ -18,6 +18,7 @@
 		A9451DBD1AE511B400B3EB26 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DBC1AE511B400B3EB26 /* InterestsViewController.swift */; };
 		A9451DBF1AE511BF00B3EB26 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DBE1AE511BF00B3EB26 /* ProjectsViewController.swift */; };
 		A9451DC11AE511CC00B3EB26 /* WwdcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DC01AE511CC00B3EB26 /* WwdcViewController.swift */; };
+		A97E331B1AE75D3300F2D373 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E331A1AE75D3300F2D373 /* TransitionManager.swift */; };
 		A9AECFAA1AE537BE00BDEF56 /* wisp 1.mov in Resources */ = {isa = PBXBuildFile; fileRef = A9AECFA91AE537BE00BDEF56 /* wisp 1.mov */; };
 		A9AECFAC1AE5B53D00BDEF56 /* WispView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AECFAB1AE5B53D00BDEF56 /* WispView.swift */; };
 		A9F5F98E1AE67F4F001058B5 /* TypeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5F98D1AE67F4F001058B5 /* TypeLabel.swift */; };
@@ -49,6 +50,7 @@
 		A9451DBC1AE511B400B3EB26 /* InterestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		A9451DBE1AE511BF00B3EB26 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		A9451DC01AE511CC00B3EB26 /* WwdcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WwdcViewController.swift; sourceTree = "<group>"; };
+		A97E331A1AE75D3300F2D373 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		A9AECFA91AE537BE00BDEF56 /* wisp 1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "wisp 1.mov"; sourceTree = "<group>"; };
 		A9AECFAB1AE5B53D00BDEF56 /* WispView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WispView.swift; sourceTree = "<group>"; };
 		A9F5F98D1AE67F4F001058B5 /* TypeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeLabel.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				A9AECFA91AE537BE00BDEF56 /* wisp 1.mov */,
 				A9451D971AE4DC5A00B3EB26 /* Main.storyboard */,
+				A97E331A1AE75D3300F2D373 /* TransitionManager.swift */,
 				A9451D9A1AE4DC5A00B3EB26 /* Images.xcassets */,
 				A9451D9C1AE4DC5A00B3EB26 /* LaunchScreen.xib */,
 			);
@@ -284,6 +287,7 @@
 				A9451DBD1AE511B400B3EB26 /* InterestsViewController.swift in Sources */,
 				A9451D961AE4DC5A00B3EB26 /* ViewController.swift in Sources */,
 				A9F5F98E1AE67F4F001058B5 /* TypeLabel.swift in Sources */,
+				A97E331B1AE75D3300F2D373 /* TransitionManager.swift in Sources */,
 				A9451D941AE4DC5A00B3EB26 /* AppDelegate.swift in Sources */,
 				A9451DBB1AE511A400B3EB26 /* SkillsViewController.swift in Sources */,
 				A9451DBF1AE511BF00B3EB26 /* ProjectsViewController.swift in Sources */,

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>A5F3BEE7-D2B4-49EE-BD7B-218FFFF0154A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>wwdc_student_portfolio</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>46C5FB5F11EEA4611BDB5963553E1DFDE4D74E7D</key>
 		<string>https://github.com/simultech/wwdc_student_portfolio.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>wwdc_student_portfolio.xcodeproj</string>
+	<string>wwdc_student_portfolio.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>46C5FB5F11EEA4611BDB5963553E1DFDE4D74E7D</key>

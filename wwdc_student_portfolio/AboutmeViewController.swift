@@ -12,6 +12,16 @@ class AboutmeViewController : UIViewController {
     func setup(){
         print("about me page")
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        print("APPEARED")
+        //move the origin back, fake create the
+        print(self.view.frame.origin)
+    }
+    
+    override func viewDidLoad() {
+        print("LOADED")
+    }
 
 
 }
