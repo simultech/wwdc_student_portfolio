@@ -19,8 +19,7 @@ class AboutmeViewController : UIViewController {
     override func viewDidLoad() {
     print("about me page")
         //aboutMeButton.titleLabel?.text = "hello"
-        aboutMeButton.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
-       
+        //aboutMeButton.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
     }
     func setup(){
 
@@ -31,6 +30,4 @@ class AboutmeViewController : UIViewController {
         //move the origin back, fake create the
         print(self.view.frame.origin)
     }
-
-
 }
