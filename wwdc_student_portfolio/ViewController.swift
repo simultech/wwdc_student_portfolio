@@ -74,6 +74,15 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         fadeIn(self.wisp, delay: 0)
         fadeIn(self.wisp.maskImageView, delay: 0)
+        let touch = touches.first as! UITouch
+        let translatedPoint = touch.locationInView(self.view)
+        self.wisp.center = CGPointMake(translatedPoint.x, translatedPoint.y)
+        self.wisp.maskImageView.center = self.wisp.center
+    }
+    
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        fadeOut(self.wisp, delay:0)
+        fadeOut(self.wisp.maskImageView, delay: 0)
     }
     
     override func viewDidAppear(animated: Bool) {
