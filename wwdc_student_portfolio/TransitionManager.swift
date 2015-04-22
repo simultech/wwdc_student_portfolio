@@ -12,6 +12,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
     
     private var presenting = true
     private var sidebarwidth = CGFloat(50.0)
+    var xAnimatePostion:CGFloat = 0
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
@@ -39,7 +40,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         let duration = self.transitionDuration(transitionContext)
     
         //From Transition
-        UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: nil, animations: {
+        UIView.animateWithDuration(duration/2, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.1, options: nil, animations: {
             if (self.presenting) {
                 fromView.transform = self.home_translation()
             } else {
@@ -49,7 +50,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         )
         
         //To Transition
-        UIView.animateWithDuration(duration, delay: 2.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: nil, animations: {
+        UIView.animateWithDuration(duration/2, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.1, options: nil, animations: {
             if (self.presenting) {
                 toView.transform = CGAffineTransformMakeTranslation(self.sidebarwidth, 0)
             } else {
@@ -59,18 +60,17 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
                 transitionContext.completeTransition(true)
             }
         )
-        
     }
     
     func home_translation() -> CGAffineTransform {
         let π : CGFloat = 3.14159265359
         let rotation = CGAffineTransformMakeRotation(-π/2)
-        let position = CGAffineTransformMakeTranslation(-5, -150)
+        let position = CGAffineTransformMakeTranslation(xAnimatePostion, 0)
         return CGAffineTransformConcat(rotation, position)
     }
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
-        return 3
+        return 4
     }
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {

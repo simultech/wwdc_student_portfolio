@@ -88,20 +88,30 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     // MARK: Transitions
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        // this gets a reference to the screen that we're about to transition to
         let toViewController = segue.destinationViewController as! UIViewController
-        
-        // instead of using the default transition animation, we'll ask
-        // the segue to use our custom TransitionManager object to manage the transition animation
+        if(sender != nil) {
+            if(sender!.isEqual(self.aboutmeButton)) {
+                self.transitionManager.xAnimatePostion = -255
+            } else if(sender!.isEqual(self.interestsButton)) {
+                self.transitionManager.xAnimatePostion = -300
+            } else if(sender!.isEqual(self.skillsButton)) {
+                self.transitionManager.xAnimatePostion = -350
+            } else if(sender!.isEqual(self.projectsButton)) {
+                self.transitionManager.xAnimatePostion = -400
+            } else if(sender!.isEqual(self.wwdcButton)) {
+                self.transitionManager.xAnimatePostion = -450
+            } else {
+                self.transitionManager.xAnimatePostion = 0
+            }
+        }
         toViewController.transitioningDelegate = self.transitionManager
+    }
+    
+    @IBAction func unwindToViewController (sender: UIStoryboardSegue){
         
     }
     
     // MARK: Event listeners
-    @IBAction func unwindToViewController (sender: UIStoryboardSegue){
-        
-    }
     
     @IBAction func helloClicked(sender: AnyObject) {
         typeIn(self.aboutmeText, delay: 0)

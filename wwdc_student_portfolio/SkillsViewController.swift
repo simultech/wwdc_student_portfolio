@@ -8,6 +8,14 @@
 
 import UIKit
 
-class SkillsViewController : UIViewController {
+class SkillsViewController : BaseViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        makeBackground("I am an",highlightText:"Interaction Designer",yoffset:41,highlightColor:UIColor(hue: 0.032, saturation: 0.588, brightness: 1.000, alpha: 1))
+    }
     
 }

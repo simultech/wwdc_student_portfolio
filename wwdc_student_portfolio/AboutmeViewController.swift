@@ -8,26 +8,17 @@
 
 import UIKit
 
-class AboutmeViewController : UIViewController {
-    @IBOutlet weak var aboutMeButton: UIButton!
-    @IBOutlet weak var aboutMeLabel: UILabel!
+class AboutmeViewController : BaseViewController {
 
     @IBAction func aboutMeButtonClick(sender: UIButton) {
         print("about me button click")
     }
 
     override func viewDidLoad() {
-    print("about me page")
-        //aboutMeButton.titleLabel?.text = "hello"
-        //aboutMeButton.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
-    }
-    func setup(){
-
+        super.viewDidLoad()
     }
     
     override func viewDidAppear(animated: Bool) {
-        print("APPEARED")
-        //move the origin back, fake create the
-        print(self.view.frame.origin)
+        makeBackground("My name is",highlightText:"Andrew Dekker",yoffset:41,highlightColor:UIColor(hue: 0.486, saturation: 0.556, brightness: 0.910, alpha: 1))
     }
 }
