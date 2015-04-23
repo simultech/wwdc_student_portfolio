@@ -20,6 +20,12 @@
 		A9451DC11AE511CC00B3EB26 /* WwdcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9451DC01AE511CC00B3EB26 /* WwdcViewController.swift */; };
 		A97E331B1AE75D3300F2D373 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E331A1AE75D3300F2D373 /* TransitionManager.swift */; };
 		A97E331D1AE7C1C000F2D373 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E331C1AE7C1C000F2D373 /* BaseViewController.swift */; };
+		A97E33211AE9087100F2D373 /* Aboutme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E33201AE9087100F2D373 /* Aboutme.swift */; };
+		A97E33231AE9087E00F2D373 /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E33221AE9087E00F2D373 /* Skills.swift */; };
+		A97E33251AE9088900F2D373 /* Interests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E33241AE9088900F2D373 /* Interests.swift */; };
+		A97E33271AE9089200F2D373 /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E33261AE9089200F2D373 /* Projects.swift */; };
+		A97E33291AE9089F00F2D373 /* Wwdc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E33281AE9089F00F2D373 /* Wwdc.swift */; };
+		A97E332B1AE908AA00F2D373 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E332A1AE908AA00F2D373 /* Base.swift */; };
 		A9AECFAA1AE537BE00BDEF56 /* wisp 1.mov in Resources */ = {isa = PBXBuildFile; fileRef = A9AECFA91AE537BE00BDEF56 /* wisp 1.mov */; };
 		A9AECFAC1AE5B53D00BDEF56 /* WispView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AECFAB1AE5B53D00BDEF56 /* WispView.swift */; };
 		A9F5F98E1AE67F4F001058B5 /* TypeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5F98D1AE67F4F001058B5 /* TypeLabel.swift */; };
@@ -53,6 +59,12 @@
 		A9451DC01AE511CC00B3EB26 /* WwdcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WwdcViewController.swift; sourceTree = "<group>"; };
 		A97E331A1AE75D3300F2D373 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		A97E331C1AE7C1C000F2D373 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A97E33201AE9087100F2D373 /* Aboutme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Aboutme.swift; path = Models/Aboutme.swift; sourceTree = "<group>"; };
+		A97E33221AE9087E00F2D373 /* Skills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Skills.swift; path = Models/Skills.swift; sourceTree = "<group>"; };
+		A97E33241AE9088900F2D373 /* Interests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Interests.swift; path = Models/Interests.swift; sourceTree = "<group>"; };
+		A97E33261AE9089200F2D373 /* Projects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Projects.swift; path = Models/Projects.swift; sourceTree = "<group>"; };
+		A97E33281AE9089F00F2D373 /* Wwdc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wwdc.swift; path = Models/Wwdc.swift; sourceTree = "<group>"; };
+		A97E332A1AE908AA00F2D373 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Base.swift; path = Models/Base.swift; sourceTree = "<group>"; };
 		A9AECFA91AE537BE00BDEF56 /* wisp 1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "wisp 1.mov"; sourceTree = "<group>"; };
 		A9AECFAB1AE5B53D00BDEF56 /* WispView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WispView.swift; sourceTree = "<group>"; };
 		A9F5F98D1AE67F4F001058B5 /* TypeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeLabel.swift; sourceTree = "<group>"; };
@@ -169,6 +181,12 @@
 		A9451DB61AE5115200B3EB26 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A97E33201AE9087100F2D373 /* Aboutme.swift */,
+				A97E33221AE9087E00F2D373 /* Skills.swift */,
+				A97E33241AE9088900F2D373 /* Interests.swift */,
+				A97E33261AE9089200F2D373 /* Projects.swift */,
+				A97E33281AE9089F00F2D373 /* Wwdc.swift */,
+				A97E332A1AE908AA00F2D373 /* Base.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -289,10 +307,16 @@
 				A97E331D1AE7C1C000F2D373 /* BaseViewController.swift in Sources */,
 				A9451DB91AE5118F00B3EB26 /* AboutmeViewController.swift in Sources */,
 				A9451DBD1AE511B400B3EB26 /* InterestsViewController.swift in Sources */,
+				A97E33251AE9088900F2D373 /* Interests.swift in Sources */,
+				A97E33211AE9087100F2D373 /* Aboutme.swift in Sources */,
 				A9451D961AE4DC5A00B3EB26 /* ViewController.swift in Sources */,
+				A97E332B1AE908AA00F2D373 /* Base.swift in Sources */,
 				A9F5F98E1AE67F4F001058B5 /* TypeLabel.swift in Sources */,
 				A97E331B1AE75D3300F2D373 /* TransitionManager.swift in Sources */,
+				A97E33291AE9089F00F2D373 /* Wwdc.swift in Sources */,
 				A9451D941AE4DC5A00B3EB26 /* AppDelegate.swift in Sources */,
+				A97E33231AE9087E00F2D373 /* Skills.swift in Sources */,
+				A97E33271AE9089200F2D373 /* Projects.swift in Sources */,
 				A9451DBB1AE511A400B3EB26 /* SkillsViewController.swift in Sources */,
 				A9451DBF1AE511BF00B3EB26 /* ProjectsViewController.swift in Sources */,
 			);

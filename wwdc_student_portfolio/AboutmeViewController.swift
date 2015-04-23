@@ -10,15 +10,23 @@ import UIKit
 
 class AboutmeViewController : BaseViewController {
 
-    @IBAction func aboutMeButtonClick(sender: UIButton) {
-        print("about me button click")
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadModel()
     }
     
     override func viewDidAppear(animated: Bool) {
         makeBackground("My name is",highlightText:"Andrew Dekker",yoffset:41,highlightColor:UIColor(hue: 0.486, saturation: 0.556, brightness: 0.910, alpha: 1))
+    }
+    
+    //Mark: Data loading
+    func loadModel() {
+        model = Aboutme.new()
+        model.load(modelLoaded)
+    }
+    
+    func modelLoaded() {
+        print("AND WE ARE DONE")
+        print(model.items)
     }
 }

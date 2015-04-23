@@ -12,6 +12,7 @@ class BaseViewController: UIViewController {
     
     var sidebar:UIView!
     var backButton:UIButton!
+    var model:Base!
 
     override func viewDidLoad() {
         super.viewDidLoad()
