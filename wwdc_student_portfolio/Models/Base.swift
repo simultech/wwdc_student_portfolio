@@ -29,7 +29,9 @@ class Base: NSObject {
                     print(error?.localizedDescription)
                 } else {
                     self.items = responseData
-                    completion()
+                    dispatch_async(dispatch_get_main_queue(), {
+                        completion()
+                    })
                 }
             }
         })

@@ -102,11 +102,7 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func reloadTableView() {
-        print("$$$")
-        print(self.model.items)
-        print("$$$")
         self.tableView.reloadData()
-        print("IVE JUST RELOADED")
     }
     
     //TableView methods
