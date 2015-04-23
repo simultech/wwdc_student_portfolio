@@ -9,5 +9,10 @@
 import UIKit
 
 class Skills: Base {
+    
+    override init() {
+        super.init()
+        self.endpoint = "skills.php"
+    }
    
 }

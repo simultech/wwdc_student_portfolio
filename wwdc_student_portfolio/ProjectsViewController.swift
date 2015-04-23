@@ -16,6 +16,7 @@ class ProjectsViewController : BaseViewController {
     
     override func viewDidAppear(animated: Bool) {
         makeBackground("working on a",highlightText:"number of projects",yoffset:41,highlightColor:UIColor(hue: 0.733, saturation: 0.678, brightness: 0.961, alpha: 1))
+        super.viewDidAppear(animated)
     }
     
 }

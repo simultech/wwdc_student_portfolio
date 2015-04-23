@@ -10,4 +10,9 @@ import UIKit
 
 class Interests: Base {
    
+    override init() {
+        super.init()
+        self.endpoint = "interests.php"
+    }
+    
 }

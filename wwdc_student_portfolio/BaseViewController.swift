@@ -8,17 +8,29 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var sidebar:UIView!
     var backButton:UIButton!
     var model:Base!
+    
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let statusBarBG = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 22))
         statusBarBG.backgroundColor = UIColor.blackColor()
         self.view.addSubview(statusBarBG)
+        //setup tableview
+        if(tableView != nil) {
+            tableView.delegate = self
+            tableView.dataSource = self
+            tableView.alpha = 0
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        fadeIn(tableView as UIView, delay: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +46,9 @@ class BaseViewController: UIViewController {
     
     func backButtonClicked() {
         UIView.animateWithDuration(NSTimeInterval(0.5), delay: 0, options: nil, animations: {
+            if(self.tableView != nil) {
+                self.tableView.alpha = 0
+            }
             self.backButton.alpha = 0
             }, completion:{ finished in
                 self.sidebar.removeFromSuperview()
@@ -84,6 +99,40 @@ class BaseViewController: UIViewController {
         
         sideBarText.frame.origin.y = self.view.frame.size.height/2 + difference + 5
         sideBarHighlight.frame.origin.y = self.view.frame.size.height/2 - 185 + difference + 5
+    }
+    
+    func reloadTableView() {
+        print("$$$")
+        print(self.model.items)
+        print("$$$")
+        self.tableView.reloadData()
+        print("IVE JUST RELOADED")
+    }
+    
+    //TableView methods
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(self.model != nil) {
+            println("====")
+            println("ROWS")
+            println(self.model.items.count)
+            println("====")
+            return self.model.items.count
+        }
+        print("NO ROWS")
+        return 0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        print("CELL REFRESH")
+        let baseCell = "BaseCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(baseCell, forIndexPath: indexPath) as! UITableViewCell
+        var cellData:NSDictionary = self.model.items.objectAtIndex(indexPath.row) as! NSDictionary
+        cell.textLabel!.text = cellData.objectForKey("content") as? String
+        return cell
     }
 
 }

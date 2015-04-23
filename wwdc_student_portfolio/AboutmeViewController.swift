@@ -17,16 +17,12 @@ class AboutmeViewController : BaseViewController {
     
     override func viewDidAppear(animated: Bool) {
         makeBackground("My name is",highlightText:"Andrew Dekker",yoffset:41,highlightColor:UIColor(hue: 0.486, saturation: 0.556, brightness: 0.910, alpha: 1))
+        super.viewDidAppear(animated)
     }
     
     //Mark: Data loading
     func loadModel() {
-        model = Aboutme.new()
-        model.load(modelLoaded)
-    }
-    
-    func modelLoaded() {
-        print("AND WE ARE DONE")
-        print(model.items)
+        self.model = Aboutme.new()
+        self.model.load(reloadTableView)
     }
 }

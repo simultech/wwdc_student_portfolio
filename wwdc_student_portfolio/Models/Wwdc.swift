@@ -9,5 +9,10 @@
 import UIKit
 
 class Wwdc: Base {
+    
+    override init() {
+        super.init()
+        self.endpoint = "wwdc.php"
+    }
    
 }

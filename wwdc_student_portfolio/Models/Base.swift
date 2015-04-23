@@ -10,7 +10,7 @@ import UIKit
 
 class Base: NSObject {
     
-    var items:NSArray = []
+    var items:NSArray = [["content":"zzz"]]
     var endpoint:String = ""
     let baseURL:String = "http://simultech.net/api/"
     
