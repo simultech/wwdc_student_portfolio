@@ -21,6 +21,10 @@ class HeadingTableViewCell: BaseTableViewCell {
         label.font = UIFont(name: "Helvetica", size: 24)
         label.textColor = UIColor.whiteColor()
         label.textAlignment = NSTextAlignment.Center
+        label.layer.shadowOpacity = 1.0
+        label.layer.shadowRadius = 0.0
+        label.layer.shadowColor = UIColor.blackColor().CGColor
+        label.layer.shadowOffset = CGSizeMake(0.0, 1.0)
         view.backgroundColor = UIColor.clearColor()
         view.layer.cornerRadius = 0
         view.layer.borderWidth = 0

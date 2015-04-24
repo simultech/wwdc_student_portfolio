@@ -41,7 +41,7 @@ class BaseTableViewCell: UITableViewCell {
         view.layer.cornerRadius = 9
         view.layer.masksToBounds = true
         view.backgroundColor = UIColor.whiteColor()
-        view.layer.borderColor = UIColor.grayColor().CGColor
+        view.layer.borderColor = UIColor(hue: 0, saturation: 0, brightness: 0.2, alpha: 1).CGColor
         view.layer.borderWidth = 1.0
         return view
     }
