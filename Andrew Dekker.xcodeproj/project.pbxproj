@@ -26,6 +26,9 @@
 		A97E33271AE9089200F2D373 /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E33261AE9089200F2D373 /* Projects.swift */; };
 		A97E33291AE9089F00F2D373 /* Wwdc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E33281AE9089F00F2D373 /* Wwdc.swift */; };
 		A97E332B1AE908AA00F2D373 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E332A1AE908AA00F2D373 /* Base.swift */; };
+		A97E332D1AE9309B00F2D373 /* CellMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E332C1AE9309B00F2D373 /* CellMapView.swift */; };
+		A97E33301AE9C3F400F2D373 /* CellImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E332F1AE9C3F400F2D373 /* CellImageView.swift */; };
+		A997E76B1AE9E63700F75873 /* DefaultSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A997E76A1AE9E63700F75873 /* DefaultSegue.swift */; };
 		A9AECFAA1AE537BE00BDEF56 /* wisp 1.mov in Resources */ = {isa = PBXBuildFile; fileRef = A9AECFA91AE537BE00BDEF56 /* wisp 1.mov */; };
 		A9AECFAC1AE5B53D00BDEF56 /* WispView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AECFAB1AE5B53D00BDEF56 /* WispView.swift */; };
 		A9F5F98E1AE67F4F001058B5 /* TypeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5F98D1AE67F4F001058B5 /* TypeLabel.swift */; };
@@ -42,14 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A9451D8E1AE4DC5A00B3EB26 /* wwdc_student_portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wwdc_student_portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9451D8E1AE4DC5A00B3EB26 /* Andrew Dekker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Andrew Dekker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9451D921AE4DC5A00B3EB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9451D931AE4DC5A00B3EB26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9451D951AE4DC5A00B3EB26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A9451D981AE4DC5A00B3EB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9451D9A1AE4DC5A00B3EB26 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A9451D9D1AE4DC5A00B3EB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A9451DA31AE4DC5B00B3EB26 /* wwdc_student_portfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wwdc_student_portfolioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9451DA31AE4DC5B00B3EB26 /* Andrew DekkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Andrew DekkerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9451DA81AE4DC5B00B3EB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9451DA91AE4DC5B00B3EB26 /* wwdc_student_portfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wwdc_student_portfolioTests.swift; sourceTree = "<group>"; };
 		A9451DB81AE5118F00B3EB26 /* AboutmeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutmeViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +68,9 @@
 		A97E33261AE9089200F2D373 /* Projects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Projects.swift; path = Models/Projects.swift; sourceTree = "<group>"; };
 		A97E33281AE9089F00F2D373 /* Wwdc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wwdc.swift; path = Models/Wwdc.swift; sourceTree = "<group>"; };
 		A97E332A1AE908AA00F2D373 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Base.swift; path = Models/Base.swift; sourceTree = "<group>"; };
+		A97E332C1AE9309B00F2D373 /* CellMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMapView.swift; sourceTree = "<group>"; };
+		A97E332F1AE9C3F400F2D373 /* CellImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellImageView.swift; sourceTree = "<group>"; };
+		A997E76A1AE9E63700F75873 /* DefaultSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultSegue.swift; sourceTree = "<group>"; };
 		A9AECFA91AE537BE00BDEF56 /* wisp 1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "wisp 1.mov"; sourceTree = "<group>"; };
 		A9AECFAB1AE5B53D00BDEF56 /* WispView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WispView.swift; sourceTree = "<group>"; };
 		A9F5F98D1AE67F4F001058B5 /* TypeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeLabel.swift; sourceTree = "<group>"; };
@@ -100,8 +106,8 @@
 		A9451D8F1AE4DC5A00B3EB26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9451D8E1AE4DC5A00B3EB26 /* wwdc_student_portfolio.app */,
-				A9451DA31AE4DC5B00B3EB26 /* wwdc_student_portfolioTests.xctest */,
+				A9451D8E1AE4DC5A00B3EB26 /* Andrew Dekker.app */,
+				A9451DA31AE4DC5B00B3EB26 /* Andrew DekkerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +167,7 @@
 				A9451D971AE4DC5A00B3EB26 /* Main.storyboard */,
 				A9451D9A1AE4DC5A00B3EB26 /* Images.xcassets */,
 				A9451D9C1AE4DC5A00B3EB26 /* LaunchScreen.xib */,
+				A997E76A1AE9E63700F75873 /* DefaultSegue.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -194,18 +201,28 @@
 		A9451DB71AE5115700B3EB26 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A97E332E1AE9C3D600F2D373 /* Cells */,
 				A9AECFAB1AE5B53D00BDEF56 /* WispView.swift */,
 				A9F5F98D1AE67F4F001058B5 /* TypeLabel.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
 		};
+		A97E332E1AE9C3D600F2D373 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A97E332C1AE9309B00F2D373 /* CellMapView.swift */,
+				A97E332F1AE9C3F400F2D373 /* CellImageView.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A9451D8D1AE4DC5A00B3EB26 /* wwdc_student_portfolio */ = {
+		A9451D8D1AE4DC5A00B3EB26 /* Andrew Dekker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9451DAD1AE4DC5B00B3EB26 /* Build configuration list for PBXNativeTarget "wwdc_student_portfolio" */;
+			buildConfigurationList = A9451DAD1AE4DC5B00B3EB26 /* Build configuration list for PBXNativeTarget "Andrew Dekker" */;
 			buildPhases = (
 				A9451D8A1AE4DC5A00B3EB26 /* Sources */,
 				A9451D8B1AE4DC5A00B3EB26 /* Frameworks */,
@@ -215,14 +232,14 @@
 			);
 			dependencies = (
 			);
-			name = wwdc_student_portfolio;
+			name = "Andrew Dekker";
 			productName = wwdc_student_portfolio;
-			productReference = A9451D8E1AE4DC5A00B3EB26 /* wwdc_student_portfolio.app */;
+			productReference = A9451D8E1AE4DC5A00B3EB26 /* Andrew Dekker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A9451DA21AE4DC5B00B3EB26 /* wwdc_student_portfolioTests */ = {
+		A9451DA21AE4DC5B00B3EB26 /* Andrew DekkerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9451DB01AE4DC5B00B3EB26 /* Build configuration list for PBXNativeTarget "wwdc_student_portfolioTests" */;
+			buildConfigurationList = A9451DB01AE4DC5B00B3EB26 /* Build configuration list for PBXNativeTarget "Andrew DekkerTests" */;
 			buildPhases = (
 				A9451D9F1AE4DC5B00B3EB26 /* Sources */,
 				A9451DA01AE4DC5B00B3EB26 /* Frameworks */,
@@ -233,9 +250,9 @@
 			dependencies = (
 				A9451DA51AE4DC5B00B3EB26 /* PBXTargetDependency */,
 			);
-			name = wwdc_student_portfolioTests;
+			name = "Andrew DekkerTests";
 			productName = wwdc_student_portfolioTests;
-			productReference = A9451DA31AE4DC5B00B3EB26 /* wwdc_student_portfolioTests.xctest */;
+			productReference = A9451DA31AE4DC5B00B3EB26 /* Andrew DekkerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -257,7 +274,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9451D891AE4DC5A00B3EB26 /* Build configuration list for PBXProject "wwdc_student_portfolio" */;
+			buildConfigurationList = A9451D891AE4DC5A00B3EB26 /* Build configuration list for PBXProject "Andrew Dekker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -270,8 +287,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9451D8D1AE4DC5A00B3EB26 /* wwdc_student_portfolio */,
-				A9451DA21AE4DC5B00B3EB26 /* wwdc_student_portfolioTests */,
+				A9451D8D1AE4DC5A00B3EB26 /* Andrew Dekker */,
+				A9451DA21AE4DC5B00B3EB26 /* Andrew DekkerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -309,12 +326,15 @@
 				A9451DBD1AE511B400B3EB26 /* InterestsViewController.swift in Sources */,
 				A97E33251AE9088900F2D373 /* Interests.swift in Sources */,
 				A97E33211AE9087100F2D373 /* Aboutme.swift in Sources */,
+				A97E332D1AE9309B00F2D373 /* CellMapView.swift in Sources */,
 				A9451D961AE4DC5A00B3EB26 /* ViewController.swift in Sources */,
+				A97E33301AE9C3F400F2D373 /* CellImageView.swift in Sources */,
 				A97E332B1AE908AA00F2D373 /* Base.swift in Sources */,
 				A9F5F98E1AE67F4F001058B5 /* TypeLabel.swift in Sources */,
 				A97E331B1AE75D3300F2D373 /* TransitionManager.swift in Sources */,
 				A97E33291AE9089F00F2D373 /* Wwdc.swift in Sources */,
 				A9451D941AE4DC5A00B3EB26 /* AppDelegate.swift in Sources */,
+				A997E76B1AE9E63700F75873 /* DefaultSegue.swift in Sources */,
 				A97E33231AE9087E00F2D373 /* Skills.swift in Sources */,
 				A97E33271AE9089200F2D373 /* Projects.swift in Sources */,
 				A9451DBB1AE511A400B3EB26 /* SkillsViewController.swift in Sources */,
@@ -335,7 +355,7 @@
 /* Begin PBXTargetDependency section */
 		A9451DA51AE4DC5B00B3EB26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A9451D8D1AE4DC5A00B3EB26 /* wwdc_student_portfolio */;
+			target = A9451D8D1AE4DC5A00B3EB26 /* Andrew Dekker */;
 			targetProxy = A9451DA41AE4DC5B00B3EB26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -448,7 +468,7 @@
 				INFOPLIST_FILE = wwdc_student_portfolio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Andrew Dekker";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -462,7 +482,7 @@
 				INFOPLIST_FILE = wwdc_student_portfolio/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Andrew Dekker";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -481,8 +501,8 @@
 				);
 				INFOPLIST_FILE = wwdc_student_portfolioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wwdc_student_portfolio.app/wwdc_student_portfolio";
+				PRODUCT_NAME = "Andrew DekkerTests";
+				TEST_HOST = "";
 			};
 			name = Debug;
 		};
@@ -496,15 +516,15 @@
 				);
 				INFOPLIST_FILE = wwdc_student_portfolioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wwdc_student_portfolio.app/wwdc_student_portfolio";
+				PRODUCT_NAME = "Andrew DekkerTests";
+				TEST_HOST = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9451D891AE4DC5A00B3EB26 /* Build configuration list for PBXProject "wwdc_student_portfolio" */ = {
+		A9451D891AE4DC5A00B3EB26 /* Build configuration list for PBXProject "Andrew Dekker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9451DAB1AE4DC5B00B3EB26 /* Debug */,
@@ -513,7 +533,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9451DAD1AE4DC5B00B3EB26 /* Build configuration list for PBXNativeTarget "wwdc_student_portfolio" */ = {
+		A9451DAD1AE4DC5B00B3EB26 /* Build configuration list for PBXNativeTarget "Andrew Dekker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9451DAE1AE4DC5B00B3EB26 /* Debug */,
@@ -522,7 +542,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9451DB01AE4DC5B00B3EB26 /* Build configuration list for PBXNativeTarget "wwdc_student_portfolioTests" */ = {
+		A9451DB01AE4DC5B00B3EB26 /* Build configuration list for PBXNativeTarget "Andrew DekkerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9451DB11AE4DC5B00B3EB26 /* Debug */,

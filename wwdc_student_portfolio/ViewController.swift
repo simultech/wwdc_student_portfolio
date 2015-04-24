@@ -66,6 +66,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             skillsText.alpha = 0
             interestsText.alpha = 0
             wwdcText.alpha = 0
+            skip = true
         }
         self.wisp.alpha = 0
         self.wisp.maskImageView.alpha = 0

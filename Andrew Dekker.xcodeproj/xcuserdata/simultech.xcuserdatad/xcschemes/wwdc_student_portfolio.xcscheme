@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9451D8D1AE4DC5A00B3EB26"
-               BuildableName = "wwdc_student_portfolio.app"
-               BlueprintName = "wwdc_student_portfolio"
-               ReferencedContainer = "container:wwdc_student_portfolio.xcodeproj">
+               BuildableName = "Andrew Dekker.app"
+               BlueprintName = "Andrew Dekker"
+               ReferencedContainer = "container:Andrew Dekker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9451DA21AE4DC5B00B3EB26"
-               BuildableName = "wwdc_student_portfolioTests.xctest"
-               BlueprintName = "wwdc_student_portfolioTests"
-               ReferencedContainer = "container:wwdc_student_portfolio.xcodeproj">
+               BuildableName = "Andrew DekkerTests.xctest"
+               BlueprintName = "Andrew DekkerTests"
+               ReferencedContainer = "container:Andrew Dekker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9451DA21AE4DC5B00B3EB26"
-               BuildableName = "wwdc_student_portfolioTests.xctest"
-               BlueprintName = "wwdc_student_portfolioTests"
-               ReferencedContainer = "container:wwdc_student_portfolio.xcodeproj">
+               BuildableName = "Andrew DekkerTests.xctest"
+               BlueprintName = "Andrew DekkerTests"
+               ReferencedContainer = "container:Andrew Dekker.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9451D8D1AE4DC5A00B3EB26"
-            BuildableName = "wwdc_student_portfolio.app"
-            BlueprintName = "wwdc_student_portfolio"
-            ReferencedContainer = "container:wwdc_student_portfolio.xcodeproj">
+            BuildableName = "Andrew Dekker.app"
+            BlueprintName = "Andrew Dekker"
+            ReferencedContainer = "container:Andrew Dekker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -72,13 +72,14 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9451D8D1AE4DC5A00B3EB26"
-            BuildableName = "wwdc_student_portfolio.app"
-            BlueprintName = "wwdc_student_portfolio"
-            ReferencedContainer = "container:wwdc_student_portfolio.xcodeproj">
+            BuildableName = "Andrew Dekker.app"
+            BlueprintName = "Andrew Dekker"
+            ReferencedContainer = "container:Andrew Dekker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -90,13 +91,14 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9451D8D1AE4DC5A00B3EB26"
-            BuildableName = "wwdc_student_portfolio.app"
-            BlueprintName = "wwdc_student_portfolio"
-            ReferencedContainer = "container:wwdc_student_portfolio.xcodeproj">
+            BuildableName = "Andrew Dekker.app"
+            BlueprintName = "Andrew Dekker"
+            ReferencedContainer = "container:Andrew Dekker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

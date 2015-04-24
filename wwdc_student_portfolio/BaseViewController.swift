@@ -13,6 +13,7 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     var sidebar:UIView!
     var backButton:UIButton!
     var model:Base!
+    var spinner:UIActivityIndicatorView!
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -31,6 +32,11 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(animated: Bool) {
         fadeIn(tableView as UIView, delay: 0)
+        self.spinner = UIActivityIndicatorView(frame: CGRectMake(self.tableView.frame.size.width/2-75+self.tableView.frame.origin.x,self.tableView.frame.size.height/2-75+self.tableView.frame.origin.y,150,150));
+        spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+        self.view.addSubview(self.spinner)
+        self.spinner.startAnimating()
+        fadeIn(self.spinner, delay: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -112,13 +118,13 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(self.model != nil) {
-            println("====")
-            println("ROWS")
-            println(self.model.items.count)
-            println("====")
+            if(self.model.items.count > 0) {
+                if(self.spinner != nil) {
+                    self.spinner.hidden = true
+                }
+            }
             return self.model.items.count
         }
-        print("NO ROWS")
         return 0
     }
     

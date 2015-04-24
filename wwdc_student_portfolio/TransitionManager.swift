@@ -40,7 +40,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         let duration = self.transitionDuration(transitionContext)
     
         //From Transition
-        UIView.animateWithDuration(duration/2, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.1, options: nil, animations: {
+        UIView.animateWithDuration(duration/2, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.1, options: nil, animations: {
             if (self.presenting) {
                 fromView.transform = self.home_translation()
             } else {
@@ -50,7 +50,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         )
         
         //To Transition
-        UIView.animateWithDuration(duration/2, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.1, options: nil, animations: {
+        UIView.animateWithDuration(duration/2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.1, options: nil, animations: {
             if (self.presenting) {
                 toView.transform = CGAffineTransformMakeTranslation(self.sidebarwidth, 0)
             } else {
@@ -70,7 +70,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
     }
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
-        return 3
+        return 2
     }
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
