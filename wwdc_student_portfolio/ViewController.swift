@@ -38,6 +38,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         self.view.addGestureRecognizer(pan)
         
         var selfview = UIImageView(image: UIImage(named: "face"))
+        selfview.frame = self.view.frame
+        selfview.contentMode = UIViewContentMode.ScaleToFill
         self.view.addSubview(selfview)
         self.view.sendSubviewToBack(selfview)
         selfview.maskView = self.wisp.maskImageView

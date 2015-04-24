@@ -46,13 +46,13 @@ class BaseTableViewCell: UITableViewCell {
     
     func heightForView() -> CGFloat{
         let cellFont = UIFont(name: "Helvetica", size: 20.0)
-        let label:UILabel = UILabel(frame: CGRectMake(0, 10, cellWidth, CGFloat.max))
+        let label:UILabel = UILabel(frame: CGRectMake(10, 10, BaseTableViewCell.width-20, CGFloat.max))
         label.numberOfLines = 0
         label.lineBreakMode = NSLineBreakMode.ByWordWrapping
         label.font = cellFont
         label.text = cellText
         
         label.sizeToFit()
-        return label.frame.height+10
+        return label.frame.height+30
     }
 }

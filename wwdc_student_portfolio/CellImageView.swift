@@ -14,6 +14,7 @@ class CellImageView: UIView, UIGestureRecognizerDelegate {
     var isFullScreen:Bool = false;
     var tap:UIGestureRecognizer?
     var previousFrame:CGRect?
+    var enableZoom:Bool = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,8 +40,10 @@ class CellImageView: UIView, UIGestureRecognizerDelegate {
                 let image = UIImage(data: data)
                 dispatch_async(dispatch_get_main_queue(), {
                     self.imageView.image = UIImage(data: data!)
-                    var tapGesture = UITapGestureRecognizer(target: self, action: "imageTapped")
-                    self.addGestureRecognizer(tapGesture)
+                    if(self.enableZoom) {
+                        var tapGesture = UITapGestureRecognizer(target: self, action: "imageTapped")
+                        self.addGestureRecognizer(tapGesture)
+                    }
                 })
             }
             else {
