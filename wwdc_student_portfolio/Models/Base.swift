@@ -17,6 +17,7 @@ class Base: NSObject {
     //Mark: Data loader
     func load(completion: (() -> Void)!) {
         let session = NSURLSession.sharedSession()
+        print("LOADING"+baseURL+endpoint)
         let url = NSURL(string: baseURL+endpoint)
         var task = session.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
             if(error != nil) {

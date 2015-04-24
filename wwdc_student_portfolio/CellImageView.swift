@@ -31,12 +31,24 @@ class CellImageView: UIView, UIGestureRecognizerDelegate {
         self.imageView.frame.origin.y = 0
         self.imageView.contentMode = UIViewContentMode.ScaleAspectFill
         let url = NSURL(string: urlString)
-        let data = NSData(contentsOfURL: url!)
-        self.imageView.image = UIImage(data: data!)
+        //let data = NSData(contentsOfURL: url!)
+        let request: NSURLRequest = NSURLRequest(URL: url!)
+        let mainQueue = NSOperationQueue.mainQueue()
+        NSURLConnection.sendAsynchronousRequest(request, queue: mainQueue, completionHandler: { (response, data, error) -> Void in
+            if error == nil {
+                let image = UIImage(data: data)
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.imageView.image = UIImage(data: data!)
+                    var tapGesture = UITapGestureRecognizer(target: self, action: "imageTapped")
+                    self.addGestureRecognizer(tapGesture)
+                })
+            }
+            else {
+                println("Error: \(error.localizedDescription)")
+            }
+        })
         self.imageView.userInteractionEnabled = true;
         self.addSubview(self.imageView)
-        var tapGesture = UITapGestureRecognizer(target: self, action: "imageTapped")
-        self.addGestureRecognizer(tapGesture)
     }
     
     func imageTapped() {

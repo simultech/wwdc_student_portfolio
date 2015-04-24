@@ -24,9 +24,19 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.view.addSubview(statusBarBG)
         //setup tableview
         if(tableView != nil) {
+            BaseTableViewCell.width = self.tableView.frame.size.width
             tableView.delegate = self
             tableView.dataSource = self
             tableView.alpha = 0
+            tableView.allowsSelection = false
+            tableView.tableFooterView = UIView(frame: CGRectZero)
+            tableView.registerClass(BaseTableViewCell.self, forCellReuseIdentifier: "BaseCell")
+            tableView.registerClass(TextTableViewCell.self, forCellReuseIdentifier: "TextCell")
+            tableView.registerClass(QuoteTableViewCell.self, forCellReuseIdentifier: "QuoteCell")
+            tableView.registerClass(HeadingTableViewCell.self, forCellReuseIdentifier: "HeadingCell")
+            tableView.registerClass(MapTableViewCell.self, forCellReuseIdentifier: "MapCell")
+            tableView.registerClass(ImageTableViewCell.self, forCellReuseIdentifier: "ImageCell")
+            tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         }
     }
     
@@ -34,9 +44,11 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
         fadeIn(tableView as UIView, delay: 0)
         self.spinner = UIActivityIndicatorView(frame: CGRectMake(self.tableView.frame.size.width/2-75+self.tableView.frame.origin.x,self.tableView.frame.size.height/2-75+self.tableView.frame.origin.y,150,150));
         spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
-        self.view.addSubview(self.spinner)
-        self.spinner.startAnimating()
-        fadeIn(self.spinner, delay: 0)
+        if(self.model == nil || self.model.items.count == 0) {
+            self.view.addSubview(self.spinner)
+            self.spinner.startAnimating()
+            fadeIn(self.spinner, delay: 0)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +63,7 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func backButtonClicked() {
-        UIView.animateWithDuration(NSTimeInterval(0.5), delay: 0, options: nil, animations: {
+        UIView.animateWithDuration(NSTimeInterval(0.2), delay: 0, options: nil, animations: {
             if(self.tableView != nil) {
                 self.tableView.alpha = 0
             }
@@ -120,7 +132,9 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
         if(self.model != nil) {
             if(self.model.items.count > 0) {
                 if(self.spinner != nil) {
+                    print("HIDING SPINNER")
                     self.spinner.hidden = true
+                    self.spinner.alpha = 0
                 }
             }
             return self.model.items.count
@@ -130,11 +144,57 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         print("CELL REFRESH")
-        let baseCell = "BaseCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(baseCell, forIndexPath: indexPath) as! UITableViewCell
+        
         var cellData:NSDictionary = self.model.items.objectAtIndex(indexPath.row) as! NSDictionary
-        cell.textLabel!.text = cellData.objectForKey("content") as? String
-        return cell
+        let cellType:String = cellData.objectForKey("type") as! String
+        var cellIdentifier = self.setCellIdentifierForCellType(cellType)
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as? BaseTableViewCell
+        cell!.setCellData(cellData)
+        
+        return cell!
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        var cellData:NSDictionary = self.model.items.objectAtIndex(indexPath.row) as! NSDictionary
+        let cellType:String = cellData.objectForKey("type") as! String
+        var cell:BaseTableViewCell?
+        var height = 50.0
+        if(cellType=="text"){
+            cell = TextTableViewCell()
+        }else if(cellType=="quote"){
+            cell = QuoteTableViewCell()
+        }else if(cellType=="heading"){
+            cell = HeadingTableViewCell()
+        }else if(cellType=="map"){
+            cell = MapTableViewCell()
+        }else if(cellType=="image"){
+            cell = ImageTableViewCell()
+        }else{
+            cell = BaseTableViewCell()
+        }
+        println("-----cellType "+cellType)
+        println("cellHeight ")
+        println(cell!.heightForView())
+        cell!.setCellData(cellData)
+        return cell!.heightForView()
+    }
+    
+    func setCellIdentifierForCellType(cellType:String)->String{
+        var cellIdentifier:String?
+        if(cellType=="text") {
+            cellIdentifier = "TextCell"
+        }else if(cellType=="quote"){
+            cellIdentifier = "QuoteCell"
+        }else if(cellType=="heading"){
+            cellIdentifier = "HeadingCell"
+        }else if(cellType=="map"){
+            cellIdentifier = "MapCell"
+        }else if(cellType=="image"){
+            cellIdentifier = "ImageCell"
+        }else{
+            print("unidentified cell type")
+        }
+        return cellIdentifier!
     }
 
 }
