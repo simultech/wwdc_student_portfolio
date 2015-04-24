@@ -51,6 +51,7 @@ class CellMapView: UIView, MKMapViewDelegate {
         if annotationView == nil {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
             annotationView.image = UIImage(named:"map_icon")
+            annotationView.centerOffset = CGPointMake(0, -18)
         } else {
             annotationView.annotation = annotation
         }

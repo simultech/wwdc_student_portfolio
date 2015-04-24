@@ -40,9 +40,7 @@ class BaseTableViewCell: UITableViewCell {
         view = UIView(frame:CGRect(x: 10, y: 10, width: BaseTableViewCell.width-20, height: height-20))
         view.layer.cornerRadius = 9
         view.layer.masksToBounds = true
-        view.backgroundColor = UIColor.whiteColor()
-        view.layer.borderColor = UIColor(hue: 0, saturation: 0, brightness: 0.2, alpha: 1).CGColor
-        view.layer.borderWidth = 1.0
+        view.backgroundColor = UIColor(hue: 0, saturation: 0, brightness: 1.0, alpha: 0.8)
         return view
     }
     
