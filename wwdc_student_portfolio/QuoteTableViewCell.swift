@@ -9,16 +9,18 @@
 import UIKit
 
 class QuoteTableViewCell: BaseTableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    override func setCellData(data: NSDictionary) {
+        super.setCellData(data)
+        let label:UILabel = UILabel(frame: CGRectMake(10, 10, BaseTableViewCell.width-40, CGFloat.max))
+        label.text = "\""+cellText+"\""
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        label.font = UIFont (name: "HelveticaNeue-Italic", size: 18)
+        label.sizeToFit()
+        label.frame.origin.y = 10
+        label.textColor = UIColor.darkGrayColor()
+        view.addSubview(label)
+        view.backgroundColor = UIColor.clearColor()
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

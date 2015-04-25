@@ -11,7 +11,7 @@ import UIKit
 
 class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
-    var skip:Bool = true
+    var skip:Bool = false
     
     @IBOutlet weak var helloButton: UIButton!
     
@@ -30,6 +30,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     @IBOutlet weak var wisp: WispView!
     
     let transitionManager = TransitionManager()
+    var background:UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +69,11 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             skillsText.alpha = 0
             interestsText.alpha = 0
             wwdcText.alpha = 0
-            skip = true
+            self.background = UIImageView(frame: self.view.frame)
+            background.alpha = 0
+            self.background.backgroundColor = UIColor.yellowColor()
+            self.view.addSubview(self.background)
+            self.view.sendSubviewToBack(self.background)
         }
         self.wisp.alpha = 0
         self.wisp.maskImageView.alpha = 0
@@ -123,29 +128,37 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     // MARK: Event listeners
     
     @IBAction func helloClicked(sender: AnyObject) {
-        typeIn(self.aboutmeText, delay: 0)
-        fadeIn(self.aboutmeButton, delay: 1)
-        typeIn(self.skillsText, delay: 2)
-        fadeIn(self.skillsButton, delay: 2.8)
-        typeIn(self.interestsText, delay: 4)
-        fadeIn(self.interestsButton, delay: 5.4)
-        typeIn(self.projectsText, delay: 6.4)
-        fadeIn(self.projectsButton, delay: 7.4)
-        typeIn(self.wwdcText, delay: 9.2)
-        fadeIn(self.wwdcButton, delay: 12.0)
+        if(!skip) {
+            showBG("bg_about", delay: 0)
+            typeIn(self.aboutmeText, delay: 0)
+            fadeIn(self.aboutmeButton, delay: 1)
+            showBG("bg_skills", delay: 2)
+            typeIn(self.skillsText, delay: 2)
+            fadeIn(self.skillsButton, delay: 2.8)
+            showBG("bg_interests", delay: 4)
+            typeIn(self.interestsText, delay: 4)
+            fadeIn(self.interestsButton, delay: 5.4)
+            showBG("bg_projects", delay: 6.4)
+            typeIn(self.projectsText, delay: 6.4)
+            fadeIn(self.projectsButton, delay: 7.4)
+            showBG("bg_wwdc", delay: 9.2)
+            typeIn(self.wwdcText, delay: 9.2)
+            fadeIn(self.wwdcButton, delay: 12.0)
+            skip = true
+        }
     }
     
-//    @IBAction func aboutClicked(sender: AnyObject) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc:UIViewController = storyboard.instantiateViewControllerWithIdentifier("AboutVC") as! UIViewController
-//        vc.transitioningDelegate = self
-//        vc.modalPresentationStyle = UIModalPresentationStyle.None
-////        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-////        let vc:UIViewController = storyboard.instantiateViewControllerWithIdentifier("AboutVC") as! UIViewController
-////        self.presentViewController(vc, animated: true, completion: {
-////            print("PRESENTED")
-////        })
-//    }
+    func showBG(imageName:String, delay:NSNumber) {
+        var delta: Int64 = delay.longLongValue * Int64(NSEC_PER_SEC)
+        var time = dispatch_time(DISPATCH_TIME_NOW, delta)
+        dispatch_after(time, dispatch_get_main_queue(), {
+            println("CHANGING IMAGE TO"+imageName)
+            self.background.image = UIImage(named: imageName)
+            UIView.animateWithDuration(NSTimeInterval(1.5), delay: delay.doubleValue, options: nil, animations: {
+                self.background.alpha = 0.5
+                }, completion:nil);
+        });
+    }
     
     @IBAction func interestsClicked(sender: AnyObject) {
     }

@@ -16,8 +16,12 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     var spinner:UIActivityIndicatorView!
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var startOrientation:UIInterfaceOrientation!
 
     override func viewDidLoad() {
+        startOrientation = UIApplication.sharedApplication().statusBarOrientation
+        
         super.viewDidLoad()
         let statusBarBG = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 22))
         statusBarBG.backgroundColor = UIColor.blackColor()
@@ -38,6 +42,10 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
             tableView.registerClass(ImageTableViewCell.self, forCellReuseIdentifier: "ImageCell")
             tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         }
+    }
+    
+    override func shouldAutorotate() -> Bool{
+        return false
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -63,6 +71,7 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func backButtonClicked() {
+        UIDevice.currentDevice().setValue(startOrientation.rawValue, forKey: "orientation")
         UIView.animateWithDuration(NSTimeInterval(0.2), delay: 0, options: nil, animations: {
             if(self.tableView != nil) {
                 self.tableView.alpha = 0
@@ -143,7 +152,6 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print("CELL REFRESH")
         
         var cellData:NSDictionary = self.model.items.objectAtIndex(indexPath.row) as! NSDictionary
         let cellType:String = cellData.objectForKey("type") as! String
@@ -172,9 +180,6 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
         }else{
             cell = BaseTableViewCell()
         }
-        println("-----cellType "+cellType)
-        println("cellHeight ")
-        println(cell!.heightForView())
         cell!.setCellData(cellData)
         return cell!.heightForView()
     }
