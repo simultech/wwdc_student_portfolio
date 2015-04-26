@@ -39,8 +39,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         self.view.addGestureRecognizer(pan)
         
         var selfview = UIImageView(image: UIImage(named: "face"))
+        selfview.contentMode = UIViewContentMode.ScaleAspectFill
         selfview.frame = self.view.frame
-        selfview.contentMode = UIViewContentMode.ScaleToFill
         self.view.addSubview(selfview)
         self.view.sendSubviewToBack(selfview)
         selfview.maskView = self.wisp.maskImageView
@@ -80,6 +80,26 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         self.wisp.maskImageView.alpha = 0
     }
     
+    func animateHello()
+    {
+        let fadeInTime:Double = 1.5
+        let fadeOutTime:Double = 1.5
+        
+        UIView.animateWithDuration(fadeInTime, delay:0, options: UIViewAnimationOptions.AllowUserInteraction, animations: { () -> Void in
+            self.helloButton.alpha = 1.0
+            }) { (Bool) -> Void in
+                UIView.animateWithDuration(fadeOutTime, delay:0, options: UIViewAnimationOptions.AllowUserInteraction, animations: { () -> Void in
+                    self.helloButton.alpha = 0.4
+                    }, completion: { (Bool) -> Void in
+                        if(!self.skip) {
+                            self.animateHello()
+                        } else {
+                            self.fadeIn(self.helloButton, delay: 0)
+                        }
+                })
+        }
+    }
+    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         fadeIn(self.wisp, delay: 0)
         fadeIn(self.wisp.maskImageView, delay: 0)
@@ -95,8 +115,15 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        fadeIn(self.helloButton, delay:2);
-        
+        UIView.animateWithDuration(NSTimeInterval(2.5), delay: 2, options: UIViewAnimationOptions.AllowUserInteraction, animations: {
+            self.helloButton.alpha = 1.0
+            }, completion:{ (Bool) -> Void in
+                if(!self.skip) {
+                    self.animateHello()
+                } else {
+                    self.helloButton.frame.origin.y = 48
+                }
+        });
     }
 
     override func didReceiveMemoryWarning() {
@@ -130,48 +157,22 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     @IBAction func helloClicked(sender: AnyObject) {
         if(!skip) {
-            showBG("bg_about", delay: 0)
+            UIView.animateWithDuration(NSTimeInterval(1), delay: 0, options: nil, animations: {
+                self.helloButton.frame.origin.y = 48
+                }, completion:{ (Bool) -> Void in
+            })
             typeIn(self.aboutmeText, delay: 0)
             fadeIn(self.aboutmeButton, delay: 1)
-            showBG("bg_skills", delay: 2.8)
             typeIn(self.skillsText, delay: 2)
             fadeIn(self.skillsButton, delay: 2.8)
-            showBG("bg_interests", delay: 5.4)
             typeIn(self.interestsText, delay: 4)
             fadeIn(self.interestsButton, delay: 5.4)
-            showBG("bg_projects", delay: 7.4)
             typeIn(self.projectsText, delay: 6.4)
             fadeIn(self.projectsButton, delay: 7.4)
-            showBG("bg_wwdc", delay: 11.5)
             typeIn(self.wwdcText, delay: 9.2)
             fadeIn(self.wwdcButton, delay: 12.0)
-            showBG("bg_black", delay: 13.0)
             skip = true
         }
-    }
-    
-    func showBG(imageName:String, delay:NSNumber) {
-        let levelFade:CGFloat = 0.2
-        var delta: Int64 = delay.longLongValue * Int64(NSEC_PER_SEC)
-        var time = dispatch_time(DISPATCH_TIME_NOW, delta)
-        dispatch_after(time, dispatch_get_main_queue(), {
-            if(self.background.alpha == levelFade) {
-                print("CROSSFADE")
-                let crossFade:CABasicAnimation = CABasicAnimation(keyPath: "contents")
-                crossFade.duration = 1.5;
-                var newImage = UIImage(named: imageName)
-                crossFade.fromValue = self.background.image
-                crossFade.toValue = newImage
-                self.background.layer.addAnimation(crossFade, forKey: "animateContents")
-                self.background.image = newImage;
-            } else {
-                println("CHANGING IMAGE TO"+imageName)
-                self.background.image = UIImage(named: imageName)
-                UIView.animateWithDuration(NSTimeInterval(1.5), delay: delay.doubleValue, options: nil, animations: {
-                    self.background.alpha = levelFade
-                    }, completion:nil);
-            }
-        });
     }
     
     @IBAction func interestsClicked(sender: AnyObject) {

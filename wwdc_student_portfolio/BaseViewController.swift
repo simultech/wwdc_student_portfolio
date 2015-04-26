@@ -14,6 +14,7 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     var backButton:UIButton!
     var model:Base!
     var spinner:UIActivityIndicatorView!
+    var overlay:UIView!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,6 +22,11 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         startOrientation = UIApplication.sharedApplication().statusBarOrientation
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "showFullImage:",
+            name: "showFullImage",
+            object: nil)
         
         super.viewDidLoad()
         let statusBarBG = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 22))
@@ -62,6 +68,34 @@ class BaseViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewDidAppear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "showFullImage", object: nil)
+    }
+    
+    func showFullImage(notification:NSNotification) {
+        var overlay_image: UIImage? = CellImageView.imageCache.objectForKey(CellImageView.imageToShow) as? UIImage
+        overlay = UIView(frame: self.view.frame)
+        overlay.backgroundColor = UIColor.blackColor()
+        var overlayimage = UIImageView(image:overlay_image)
+        overlayimage.frame = self.view.frame
+        overlayimage.backgroundColor = UIColor.blackColor()
+        overlayimage.contentMode = UIViewContentMode.ScaleAspectFit
+        overlayimage.userInteractionEnabled = true
+        overlay.addSubview(overlayimage)
+        self.view.addSubview(overlay)
+        overlay.alpha = 0
+        fadeIn(overlay, delay: 0)
+        var tapGesture = UITapGestureRecognizer(target: self, action: "hideFullImage")
+        overlayimage.addGestureRecognizer(tapGesture)
+    }
+    
+    func hideFullImage() {
+        UIView.animateWithDuration(NSTimeInterval(0.5), delay: 0, options: nil, animations: {
+            self.overlay.alpha = 0
+            }, completion:nil);
     }
 
     func fadeIn(view:UIView, delay:NSNumber) {

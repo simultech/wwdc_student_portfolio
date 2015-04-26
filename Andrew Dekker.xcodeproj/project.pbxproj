@@ -167,7 +167,6 @@
 			children = (
 				A97E331A1AE75D3300F2D373 /* TransitionManager.swift */,
 				A9451D931AE4DC5A00B3EB26 /* AppDelegate.swift */,
-				A9451D951AE4DC5A00B3EB26 /* ViewController.swift */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -193,6 +192,7 @@
 				A9451DBE1AE511BF00B3EB26 /* ProjectsViewController.swift */,
 				A9451DC01AE511CC00B3EB26 /* WwdcViewController.swift */,
 				A97E331C1AE7C1C000F2D373 /* BaseViewController.swift */,
+				A9451D951AE4DC5A00B3EB26 /* ViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
