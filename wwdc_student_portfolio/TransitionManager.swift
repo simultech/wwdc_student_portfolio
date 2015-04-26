@@ -70,7 +70,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
     }
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
-        return 4
+        return 3
     }
     
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {

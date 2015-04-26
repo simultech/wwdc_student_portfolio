@@ -120,7 +120,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="yfy-nz-GOq">
-                                <rect key="frame" x="-109" y="307" width="525" height="241"/>
+                                <rect key="frame" x="-109" y="307" width="525" height="262"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="NcW-DZ-Kx2">
@@ -254,6 +254,7 @@
                                         </subviews>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o5o-qw-CBe">
                                 <rect key="frame" x="93" y="48" width="134" height="73"/>

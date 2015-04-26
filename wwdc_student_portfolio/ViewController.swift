@@ -70,6 +70,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             interestsText.alpha = 0
             wwdcText.alpha = 0
             self.background = UIImageView(frame: self.view.frame)
+            self.background.contentMode = UIViewContentMode.ScaleAspectFill
             background.alpha = 0
             self.background.backgroundColor = UIColor.yellowColor()
             self.view.addSubview(self.background)
@@ -132,31 +133,44 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             showBG("bg_about", delay: 0)
             typeIn(self.aboutmeText, delay: 0)
             fadeIn(self.aboutmeButton, delay: 1)
-            showBG("bg_skills", delay: 2)
+            showBG("bg_skills", delay: 2.8)
             typeIn(self.skillsText, delay: 2)
             fadeIn(self.skillsButton, delay: 2.8)
-            showBG("bg_interests", delay: 4)
+            showBG("bg_interests", delay: 5.4)
             typeIn(self.interestsText, delay: 4)
             fadeIn(self.interestsButton, delay: 5.4)
-            showBG("bg_projects", delay: 6.4)
+            showBG("bg_projects", delay: 7.4)
             typeIn(self.projectsText, delay: 6.4)
             fadeIn(self.projectsButton, delay: 7.4)
-            showBG("bg_wwdc", delay: 9.2)
+            showBG("bg_wwdc", delay: 11.5)
             typeIn(self.wwdcText, delay: 9.2)
             fadeIn(self.wwdcButton, delay: 12.0)
+            showBG("bg_black", delay: 13.0)
             skip = true
         }
     }
     
     func showBG(imageName:String, delay:NSNumber) {
+        let levelFade:CGFloat = 0.2
         var delta: Int64 = delay.longLongValue * Int64(NSEC_PER_SEC)
         var time = dispatch_time(DISPATCH_TIME_NOW, delta)
         dispatch_after(time, dispatch_get_main_queue(), {
-            println("CHANGING IMAGE TO"+imageName)
-            self.background.image = UIImage(named: imageName)
-            UIView.animateWithDuration(NSTimeInterval(1.5), delay: delay.doubleValue, options: nil, animations: {
-                self.background.alpha = 0.5
-                }, completion:nil);
+            if(self.background.alpha == levelFade) {
+                print("CROSSFADE")
+                let crossFade:CABasicAnimation = CABasicAnimation(keyPath: "contents")
+                crossFade.duration = 1.5;
+                var newImage = UIImage(named: imageName)
+                crossFade.fromValue = self.background.image
+                crossFade.toValue = newImage
+                self.background.layer.addAnimation(crossFade, forKey: "animateContents")
+                self.background.image = newImage;
+            } else {
+                println("CHANGING IMAGE TO"+imageName)
+                self.background.image = UIImage(named: imageName)
+                UIView.animateWithDuration(NSTimeInterval(1.5), delay: delay.doubleValue, options: nil, animations: {
+                    self.background.alpha = levelFade
+                    }, completion:nil);
+            }
         });
     }
     
